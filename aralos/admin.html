@@ -1,0 +1,64 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+      
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Aralos</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="co.html">Se connecter</a></li>
+            <li><a href="logos.html">Logos</a></li>
+            <li><a href="ask_logo.html">Demande de logo</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="co.html">Se connecter</a></li>
+            <li><a href="logos.html">Logos</a></li>
+            <li><a href="askLogo.html">Demande de logo</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+      <div class="container">
+        <h1 class="center blue-text text-darken-2">Admin</h1>
+        
+        <h3>Ajouter un logo</h3>
+        <div class="row">
+         <form class="col s12">
+            <div class="row">
+               <div class="file-field input-field">
+                  <div class="btn blue">
+                     <span>Parcourir</span>
+                     <input type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                     <input class="file-path validate" type="text" placeholder="Ajouter un fichier">
+                  </div>
+               </div>
+               <div class="input-field col s12 center">
+                <button class="btn waves-effect waves-light blue" type="submit" name="demande">Ajouter
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+         </form>       
+      </div>
+      </div>
+      
+      <script src="js/init.js"></script>
+    </body>
+  </html>
