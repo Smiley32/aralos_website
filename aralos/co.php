@@ -10,7 +10,7 @@ CREATE TABLE utilisateurs (
 );
 
 CREATE TABLE news (
-    newId INT PRIMARY KEY,
+    newId INT PRIMARY KEY AUTO_INCREMENT,
     newText VARCHAR(1000)
 );
 

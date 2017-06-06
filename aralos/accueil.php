@@ -15,8 +15,16 @@ html_nav(PAGE_ACCUEIL);
 echo '<div class="container">
   <h1 class="center ', getColor(), '-text text-darken-2">Aralos</h1>
 
-  <p class="card ', getColor(), ' lighten-5">Aralos est une guilde de Summoners War: Sky Arena : un jeu mobile sur Android et iOS.</p>
-</div>';
+  <h3 class="', getColor(), '-text text-darken-2">Messages</h3>';
+
+bd_connexion();
+$sql = "SELECT * FROM news";
+$R = mysqli_query($GLOBALS['bd'], $sql) or bd_error($sql);
+while($res = mysqli_fetch_assoc($R)) {
+  echo '<p class="card ', getColor(), ' lighten-5">', $res['newText'], '</p>';
+}
+
+echo '</div>';
 
 html_body_end();
 echo '</html>';

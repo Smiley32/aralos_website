@@ -147,6 +147,28 @@ while($res = mysqli_fetch_assoc($R)) {
 }
 mysqli_free_result($R);
 
+echo '<h3>Ajouter une information</h3>';
+
+if(isset($_POST['info']) && $_POST['news'] != '') {
+  $txt = mysqli_real_escape_string($GLOBALS['bd'], $_POST['news']);
+  $sql = "INSERT INTO news (newText) VALUES ('$txt')";
+  $R = mysqli_query($GLOBALS['bd'], $sql) or bd_error($sql);
+}
+
+echo '<form method="POST">
+<div class="row">
+  <div class="input-field col s12">
+    <textarea id="news" name="news" class="materialize-textarea"></textarea>
+    <label for="news">Information</label>
+  </div>
+  <div class="input-field col s12 center">
+   <button class="btn waves-effect waves-light ', getColor(), '" type="submit" name="info">Ajouter l\'info
+     <i class="material-icons right">send</i>
+   </button>
+  </div>
+</div>
+</form>';
+
 html_body_end();
 echo '</html>';
 
